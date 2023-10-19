@@ -1,0 +1,24 @@
+// React compo
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+// App component for rendering the web application
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+// Shopify AppProvider to allow for the displaying of the app interface 
+import { AppProvider } from '@shopify/polaris';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <AppProvider>
+      <App />
+    </AppProvider>
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
